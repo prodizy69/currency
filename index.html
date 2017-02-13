@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/app-service.js"></script>
+    <link rel="stylesheet" href="./css/app.css">
+</head>
+<body>
+
+<div ng-app="CurrencyConverter" ng-controller="Appcontroller">
+    <div class="maindiv">
+        <header id="abc">
+            <h3>Coinage v1.0</h3>
+        </header>
+        <div class="container">
+            <div class="col-md-offset-3 col-md-6">
+                <label for="amount">Enter monetary value for coin conversion</label>
+                <input class="form-control" id="amount" type="text" ng-model="amount" placeholder="Enter the amount." autofocus>
+                <input type="submit" id="convertbtn" value="Convert" ng-click='convert();'/>
+            </div>
+        </div>
+
+        <table>
+            <td colspan="2" id="innerdiv">converting {{entervalue}} pennies into coins</td>
+            <tr>
+                <td>coin</td>
+                <td>Amount</td>
+            </tr>
+            <tr>
+                <td>1P</td>
+                <td>{{noOf1PoundCoins}}</td>
+            </tr>
+            <tr>
+                <td>2P</td>
+                <td>{{noOf2PoundCoins}}</td>
+            </tr>
+            <tr>
+                <td>50P</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>1$</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>2$</td>
+                <td></td>
+            </tr>
+            <tr>
+              <td>1 Penni</td>
+              <td>{{noofPenniCoins}}</td>
+            </tr>
+        </table>
+
+        <footer id="abc" style="text-align: center;">
+            &copy; Coinage 2014
+        </footer>
+    </div>
+
+    <hr>
+    <br><br>
+
+</div>
+
+
+</body>
+
+</html>
